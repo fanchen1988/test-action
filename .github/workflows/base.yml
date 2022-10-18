@@ -1,0 +1,28 @@
+name: "GH Action Workflow Base"
+description: "Base testing GH action"
+on:
+  workflow_call:
+    inputs:
+      mode:
+        description: "testing mode"
+        default: 3
+        required: false
+        type: number
+runs:
+  using: "composite"
+  steps:
+    - name: "Step 1"
+      if: inputs.mode == 1
+      run: echo "Testing GH action base step 1"
+      shell: bash
+    - name: "Step 2"
+      if: inputs.mode == 2
+      run: echo "Testing GH action base step 2"
+      shell: bash
+    - name: "Step 3"
+      if: inputs.mode == 3
+      run: echo "Testing GH action base step 3"
+      shell: bash
+    - name: "Step Always"
+      run: echo "Testing GH action base step always"
+      shell: bash

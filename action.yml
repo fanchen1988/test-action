@@ -4,3 +4,4 @@ runs:
   using: "composite"
   steps:
     - run: echo "Testing GH action"
+      shell: bash

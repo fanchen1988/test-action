@@ -1,0 +1,11 @@
+name: "GH Action Workflow Base Test"
+on:
+  workflow_call:
+jobs:
+  base:
+    name: "Running base job 1 test"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Step 1"
+        run: echo "Testing GH action base test job1 step 1"
+        shell: bash

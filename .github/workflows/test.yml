@@ -17,4 +17,4 @@ jobs:
     name: Testing workflow job1
     runs-on: ubuntu-latest
     steps:
-      - uses: fanchen1988@test-action
+      - uses: fanchen1988/test-action

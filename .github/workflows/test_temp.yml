@@ -1,0 +1,20 @@
+name: test_temp_workflow
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+    # - reopened
+      - closed
+
+  push:
+    branches:
+      - main
+
+jobs:
+  job1:
+    name: Testing workflow job1 temp
+    runs-on: ubuntu-latest
+    steps:
+      - uses: .github/workflows/test_base

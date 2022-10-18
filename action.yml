@@ -1,5 +1,10 @@
 name: "GH Action Testing"
 description: "Testing GH action for first time"
+inputs:
+  mode:
+    description: "testing mode"
+    default: '3'
+    required: false
 runs:
   using: "composite"
   steps:
@@ -18,8 +23,3 @@ runs:
     - name: "Step Always"
       run: echo "Testing GH action step always"
       shell: bash
-inputs:
-  mode:
-    description: "testing mode"
-    default: '3'
-    required: false

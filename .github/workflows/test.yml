@@ -19,4 +19,4 @@ jobs:
     steps:
       - uses: fanchen1988/test-action@master
         with:
-          mode: 2
+          mode: '2'

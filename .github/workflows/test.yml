@@ -18,3 +18,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: fanchen1988/test-action@master
+        with:
+          mode: 2

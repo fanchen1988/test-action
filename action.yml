@@ -4,11 +4,11 @@ runs:
   using: "composite"
   steps:
     - name: "Step 1"
-      if: inputs.mode == "1"
+      if: inputs.mode == '1'
       run: echo "Testing GH action step 1"
       shell: bash
     - name: "Step 2"
-      if: inputs.mode == "2"
+      if: inputs.mode == '2'
       run: echo "Testing GH action step 2"
       shell: bash
     - name: "Step Always"

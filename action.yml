@@ -1,0 +1,6 @@
+name: "GH Action Testing"
+description: "Testing GH action for first time"
+runs:
+  using: "composite"
+  steps:
+    - run: echo "Testing GH action"

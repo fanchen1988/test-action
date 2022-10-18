@@ -11,6 +11,15 @@ runs:
       if: inputs.mode == '2'
       run: echo "Testing GH action step 2"
       shell: bash
+    - name: "Step 3"
+      if: inputs.mode == '3'
+      run: echo "Testing GH action step 3"
+      shell: bash
     - name: "Step Always"
       run: echo "Testing GH action step always"
       shell: bash
+inputs:
+  mode:
+    description: "testing mode"
+    default: '3'
+    required: false

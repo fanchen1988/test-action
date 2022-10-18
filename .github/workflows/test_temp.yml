@@ -17,4 +17,4 @@ jobs:
     name: Testing workflow job1 temp
     runs-on: ubuntu-latest
     steps:
-      - uses: .github/workflows/test_base.yml
+      - uses: .github/workflows/test_base.yml@local-action

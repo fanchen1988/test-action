@@ -17,25 +17,25 @@ jobs:
     name: Testing workflow job1
     runs-on: ubuntu-latest
     steps:
-      - uses: .github/workflows/base.yml
+      - uses: .github/workflows/base
         with:
           mode: 2
   job2:
     name: Testing workflow job2
     runs-on: ubuntu-latest
     steps:
-      - uses: .github/workflows/base.yml
+      - uses: .github/workflows/base
         with:
           mode: 1
   job3:
     name: Testing workflow job3
     runs-on: ubuntu-latest
     steps:
-      - uses: .github/workflows/base.yml
+      - uses: .github/workflows/base
   job4:
     name: Testing workflow job4
     runs-on: ubuntu-latest
     steps:
-      - uses: .github/workflows/base.yml
+      - uses: .github/workflows/base
         with:
           mode: 4

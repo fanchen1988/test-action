@@ -32,3 +32,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: fanchen1988/test-action@master
+  job4:
+    name: Testing workflow job4
+    runs-on: ubuntu-latest
+    steps:
+      - uses: fanchen1988/test-action@master
+        with:
+          mode: '4'

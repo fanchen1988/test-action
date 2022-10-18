@@ -20,3 +20,22 @@ jobs:
       - uses: fanchen1988/test-action@master
         with:
           mode: '2'
+  job2:
+    name: Testing workflow job2
+    runs-on: ubuntu-latest
+    steps:
+      - uses: fanchen1988/test-action@master
+        with:
+          mode: '1'
+  job3:
+    name: Testing workflow job3
+    runs-on: ubuntu-latest
+    steps:
+      - uses: fanchen1988/test-action@master
+  job4:
+    name: Testing workflow job4
+    runs-on: ubuntu-latest
+    steps:
+      - uses: fanchen1988/test-action@master
+        with:
+          mode: '4'

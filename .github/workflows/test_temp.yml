@@ -17,4 +17,4 @@ jobs:
     name: Testing workflow job1 temp
     runs-on: ubuntu-latest
     steps:
-      - uses: Rippling/rippling-protos/.github/workflows/test_base.yml
+      - uses: Rippling/rippling-protos/.github/workflows/test_base.yml@local-action

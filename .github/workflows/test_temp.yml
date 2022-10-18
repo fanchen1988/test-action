@@ -14,4 +14,4 @@ on:
 
 jobs:
   job1:
-    uses: .github/workflows/test_base.yml@local-action
+    uses: ./.github/workflows/test_base.yml@local-action

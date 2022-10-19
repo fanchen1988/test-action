@@ -1,0 +1,25 @@
+name: "GH Action Testing"
+description: "Testing GH action for first time"
+inputs:
+  mode:
+    description: "testing mode"
+    default: '3'
+    required: false
+runs:
+  using: "composite"
+  steps:
+    - name: "Step 1"
+      if: inputs.mode == '1'
+      run: echo "Testing GH action step 1"
+      shell: bash
+    - name: "Step 2"
+      if: inputs.mode == '2'
+      run: echo "Testing GH action step 2"
+      shell: bash
+    - name: "Step 3"
+      if: inputs.mode == '3'
+      run: echo "Testing GH action step 3"
+      shell: bash
+    - name: "Step Always"
+      run: echo "Testing GH action step always"
+      shell: bash

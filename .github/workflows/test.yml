@@ -17,25 +17,29 @@ jobs:
     name: Testing workflow job1
     runs-on: ubuntu-latest
     steps:
-      - uses: fanchen1988/test-action@master
+      - uses: .github/workflows/base
         with:
-          mode: '2'
+          job_mode: job1
+          step_mode: 2
   job2:
     name: Testing workflow job2
     runs-on: ubuntu-latest
     steps:
-      - uses: fanchen1988/test-action@master
+      - uses: .github/workflows/base
         with:
-          mode: '1'
+          step_mode: 1
+          job_mode: job2
   job3:
     name: Testing workflow job3
     runs-on: ubuntu-latest
     steps:
-      - uses: fanchen1988/test-action@master
+      - uses: .github/workflows/base
+        with:
+          job_mode: job1
   job4:
     name: Testing workflow job4
     runs-on: ubuntu-latest
     steps:
-      - uses: fanchen1988/test-action@master
+      - uses: .github/workflows/base
         with:
-          mode: '4'
+          step_mode: 4

@@ -1,0 +1,80 @@
+name: "GH Action Workflow Base"
+description: "Base testing GH action"
+on:
+  workflow_call:
+    inputs:
+      job_mode:
+        description: "testing job mode"
+        default: job3
+        required: false
+        type: choice
+        options:
+          - job1
+          - job2
+      step_mode:
+        description: "testing step mode"
+        default: 3
+        required: false
+        type: number
+jobs:
+  base_job_1:
+    if: inputs.job_mode == job1
+    name: "Running base job 1"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Step 1"
+        if: inputs.step_mode == 1
+        run: echo "Testing GH action base job1 step 1"
+        shell: bash
+      - name: "Step 2"
+        if: inputs.step_mode == 2
+        run: echo "Testing GH action base job1 step 2"
+        shell: bash
+      - name: "Step 3"
+        if: inputs.step_mode == 3
+        run: echo "Testing GH action base job1 step 3"
+        shell: bash
+      - name: "Step Always"
+        run: echo "Testing GH action base job1 step always"
+        shell: bash
+
+  base_job_2:
+    if: inputs.job_mode == job2
+    name: "Running base job 2"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Step 1"
+        if: inputs.step_mode == 1
+        run: echo "Testing GH action base job2 step 1"
+        shell: bash
+      - name: "Step 2"
+        if: inputs.step_mode == 2
+        run: echo "Testing GH action base job2 step 2"
+        shell: bash
+      - name: "Step 3"
+        if: inputs.step_mode == 3
+        run: echo "Testing GH action base job2 step 3"
+        shell: bash
+      - name: "Step Always"
+        run: echo "Testing GH action base job2 step always"
+        shell: bash
+
+  base_job_3:
+    name: "Running base job 3"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Step 1"
+        if: inputs.step_mode == 1
+        run: echo "Testing GH action base job3 step 1"
+        shell: bash
+      - name: "Step 2"
+        if: inputs.step_mode == 2
+        run: echo "Testing GH action base job3 step 2"
+        shell: bash
+      - name: "Step 3"
+        if: inputs.step_mode == 3
+        run: echo "Testing GH action base job3 step 3"
+        shell: bash
+      - name: "Step Always"
+        run: echo "Testing GH action base job3 step always"
+        shell: bash

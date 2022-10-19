@@ -1,0 +1,27 @@
+name: test_temp_workflow
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+    # - reopened
+      - closed
+
+  push:
+    branches:
+      - main
+
+jobs:
+  job1:
+    name: Testing workflow job1 temp
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Base - Checkout"
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.ref }}
+      - uses: ./actions/action1
+        with:
+          mode: '2'

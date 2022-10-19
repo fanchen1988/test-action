@@ -1,0 +1,8 @@
+name: "GH Action Workflow Base Test"
+description: "Testing GH action for first time"
+runs:
+  using: "composite"
+  steps:
+    - name: "Running base job 1 test"
+      run: echo "Testing GH action base test job1 step 1"
+      shell: bash
